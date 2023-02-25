@@ -1,4 +1,4 @@
-package ru.mrz.template
+package profnotes
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project
@@ -26,9 +26,8 @@ internal fun Project.configureFeature(
             // Koin
             add("implementation", libs.findBundle("koin").get())
 
-            // Orbit
-            add("implementation", libs.findBundle("orbit").get())
-            add("testImplementation", libs.findLibrary("orbit_test").get())
+            // Elmslie
+            add("implementation", libs.findBundle("elmslie").get())
 
             // Navigator
             add("implementation", libs.findBundle("navigator").get())

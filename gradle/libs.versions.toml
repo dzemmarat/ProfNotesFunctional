@@ -9,17 +9,21 @@ android_plugin_version = "7.4.1"
 # Desugar
 android_desugar_jdk_libs_version = "1.2.0"
 
+# Arrow
+arrow_version = "1.1.6-alpha.33"
+arrow_analysis_version = "2.0.2"
+
 # DI
 koin_version = "3.3.0"
 
-# MVI
-orbit_version = "4.4.0"
+# ElmSlie
+elmslie_version = "3.0.0-alpha06"
 
 # Kotlin
 kotlin_version = "1.8.10"
 serialization_json_version = "1.4.0"
 coroutines_version = "1.6.4"
-ksp_version = "1.7.10-1.0.6"
+ksp_version = "1.8.10-1.0.9"
 
 # Android Jetpack
 appcompat_version = "1.5.1"
@@ -91,6 +95,12 @@ coroutines_core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-
 coroutines_android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines_version" }
 coroutines_test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines_version" }
 
+# Arrow
+arrow_platform = { group = "io.arrow-kt", name = "arrow-stack",  version.ref = "arrow_version" }
+arrow_core = { group = "io.arrow-kt", name = "arrow-core" }
+arrow_optics = { group = "io.arrow-kt", name = "arrow-optics" }
+arrow_optics_ksp = { group = "io.arrow-kt", name = "arrow-optics-ksp-plugin", version.ref = "arrow_version" }
+
 # Android
 android_core_splash = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash_version" }
 android_core_ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core_ktx_version" }
@@ -119,11 +129,9 @@ compose_system_ui_controller = { group = "com.google.accompanist", name = "accom
 koin_android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin_version" }
 koin_compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin_version" }
 
-# Orbit
-orbit_core = { group = "org.orbit-mvi", name = "orbit-core", version.ref = "orbit_version" }
-orbit_viewmodel = { group = "org.orbit-mvi", name = "orbit-viewmodel", version.ref = "orbit_version" }
-orbit_compose = { group = "org.orbit-mvi", name = "orbit-compose", version.ref = "orbit_version" }
-orbit_test = { group = "org.orbit-mvi", name = "orbit-test", version.ref = "orbit_version" }
+# Elmslie
+elmslie_core = { group = "com.github.vivid-money.elmslie", name = "elmslie-core", version.ref = "elmslie_version" }
+elmslie_android = { group = "com.github.vivid-money.elmslie", name = "elmslie-android", version.ref = "elmslie_version" }
 
 # Test
 junit5 = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit_version" }
@@ -226,14 +234,12 @@ test = [
     "mockk",
     "robolectric",
     "coroutines_test",
-    "orbit_test",
     "koin_test"
 ]
 
-orbit = [
-    "orbit_core",
-    "orbit_compose",
-    "orbit_viewmodel"
+elmslie = [
+    "elmslie_core",
+    "elmslie_android",
 ]
 
 navigator = [
@@ -274,3 +280,4 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp_version" }
 kotlin_jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin_version" }
 kotlin_serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin_version" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt_version" }
+arrow_analysis = { id = "io.arrow-kt.analysis.kotlin", version.ref = "arrow_analysis_version" }

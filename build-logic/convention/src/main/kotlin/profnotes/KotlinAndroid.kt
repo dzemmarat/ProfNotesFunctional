@@ -1,7 +1,8 @@
-package ru.mrz.template
+package profnotes
 
 import AppSettings
 import com.android.build.api.dsl.CommonExtension
+import com.android.tools.r8.internal.kt
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.api.plugins.ExtensionAware
@@ -52,6 +53,10 @@ internal fun Project.configureKotlinAndroid(
         add("coreLibraryDesugaring", libs.findLibrary("android.desugar.jdk.libs").get())
         add("implementation", libs.findLibrary("coroutines.core").get())
         add("implementation", libs.findLibrary("coroutines.android").get())
+
+        add("implementation", platform(libs.findLibrary("arrow.platform").get()))
+        add("implementation", "io.arrow-kt:arrow-core")
+        add("implementation", "io.arrow-kt:arrow-optics")
 
         add("testImplementation", libs.findLibrary("coroutines.test").get())
         add("testImplementation", libs.findLibrary("mockk").get())

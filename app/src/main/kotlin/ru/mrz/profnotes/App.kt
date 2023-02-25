@@ -1,4 +1,4 @@
-package ru.mrz.template
+package ru.mrz.profnotes
 
 import android.app.Application
 import cafe.adriel.voyager.core.registry.ScreenRegistry

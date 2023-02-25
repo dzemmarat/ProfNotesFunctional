@@ -1,4 +1,4 @@
-package ru.mrz.template
+package ru.mrz.profnotes
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -25,9 +25,9 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabNavigator
 import ru.mrz.core.ui.theme.AppTextStyle
 import ru.mrz.core.ui.theme.TemplateApplicationTheme
-import ru.mrz.template.tabs.AddTab
-import ru.mrz.template.tabs.HomeTab
-import ru.mrz.template.tabs.ProfileTab
+import ru.mrz.profnotes.tabs.AddTab
+import ru.mrz.profnotes.tabs.HomeTab
+import ru.mrz.profnotes.tabs.ProfileTab
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterialApi::class)

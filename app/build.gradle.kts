@@ -1,10 +1,11 @@
 plugins {
     id("template.android.application")
     id("template.android.application.compose")
+    alias(libs.plugins.ksp)
 }
 
 android {
-    namespace = "ru.mrz.template"
+    namespace = "ru.mrz.profnotes"
     compileSdk = libs.versions.compile.sdk.version.get().toInt()
 
     defaultConfig {
@@ -68,8 +69,8 @@ dependencies {
     // Koin
     implementation(libs.bundles.koin)
 
-    // Orbit
-    implementation(libs.bundles.orbit)
+    // Elmslie
+    implementation(libs.bundles.elmslie)
 
     // TEST
     testImplementation(libs.bundles.test)

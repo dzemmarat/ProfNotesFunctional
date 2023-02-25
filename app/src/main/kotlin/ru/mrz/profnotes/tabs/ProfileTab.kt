@@ -1,4 +1,4 @@
-package ru.mrz.template.tabs
+package ru.mrz.profnotes.tabs
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -7,17 +7,17 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import ru.mrz.core.navigation.SharedScreen
 import ru.mrz.core.ui.theme.AppIcons
-import ru.mrz.template.R
+import ru.mrz.profnotes.R
 
-object HomeTab : Tab {
+object ProfileTab : Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val icon = AppIcons.Home
-            val title = stringResource(R.string.title_home)
+            val icon = AppIcons.Profile
+            val title = stringResource(R.string.title_profile)
             return remember {
                 TabOptions(
-                    index = 0u,
+                    index = 2u,
                     title = title,
                     icon = icon
                 )
@@ -26,6 +26,6 @@ object HomeTab : Tab {
 
     @Composable
     override fun Content() {
-        SharedScreen.Home.resolve()
+        SharedScreen.Profile.resolve()
     }
 }

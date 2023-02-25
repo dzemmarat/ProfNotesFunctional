@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.jvm) apply false
     alias(libs.plugins.kotlin.serialization) apply false
     alias(libs.plugins.detekt)
+    alias(libs.plugins.ksp)
+//    alias(libs.plugins.arrow.analysis)
     id("com.android.library") version "7.3.0" apply false
     base
 }
@@ -13,6 +15,11 @@ val detektFormatting = libs.detekt.formatting
 subprojects {
     apply {
         plugin("io.gitlab.arturbosch.detekt")
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
     }
 
     detekt {

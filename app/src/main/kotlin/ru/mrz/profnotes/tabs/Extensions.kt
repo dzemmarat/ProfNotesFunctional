@@ -1,4 +1,4 @@
-package ru.mrz.template.tabs
+package ru.mrz.profnotes.tabs
 
 import androidx.compose.runtime.Composable
 import cafe.adriel.voyager.core.registry.rememberScreen

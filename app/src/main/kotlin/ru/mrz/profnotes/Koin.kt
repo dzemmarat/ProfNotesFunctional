@@ -1,4 +1,4 @@
-package ru.mrz.template
+package ru.mrz.profnotes
 
 import android.content.Context
 import org.koin.android.ext.koin.androidContext

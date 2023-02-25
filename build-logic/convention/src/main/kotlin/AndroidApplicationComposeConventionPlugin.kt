@@ -2,7 +2,7 @@ import com.android.build.api.dsl.ApplicationExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
-import ru.mrz.template.configureAndroidCompose
+import profnotes.configureAndroidCompose
 
 @Suppress("Unused")
 class AndroidApplicationComposeConventionPlugin : Plugin<Project> {

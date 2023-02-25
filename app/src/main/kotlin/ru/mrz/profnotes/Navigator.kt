@@ -1,4 +1,4 @@
-package ru.mrz.template
+package ru.mrz.profnotes
 
 import cafe.adriel.voyager.core.registry.ScreenRegistry
 import ru.mrz.feature.add.di.addScreenModule
