@@ -22,17 +22,19 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/build-logic" />
             <option value="$PROJECT_DIR$/build-logic/convention" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/core/common" />
-            <option value="$PROJECT_DIR$/core/navigation" />
-            <option value="$PROJECT_DIR$/core/ui" />
+            <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/feature" />
-            <option value="$PROJECT_DIR$/feature/add" />
-            <option value="$PROJECT_DIR$/feature/home" />
-            <option value="$PROJECT_DIR$/feature/profile" />
+            <option value="$PROJECT_DIR$/modules/app" />
+            <option value="$PROJECT_DIR$/modules/core/common" />
+            <option value="$PROJECT_DIR$/modules/core/navigation" />
+            <option value="$PROJECT_DIR$/modules/core/ui" />
+            <option value="$PROJECT_DIR$/modules/domain/notes" />
+            <option value="$PROJECT_DIR$/modules/feature/add" />
+            <option value="$PROJECT_DIR$/modules/feature/home" />
+            <option value="$PROJECT_DIR$/modules/feature/profile" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -26,6 +26,9 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             extensions.configure<LibraryAndroidComponentsExtension> {
                 configurePrintApksTask(this)
             }
+            extensions.configure<LibraryExtension> {
+                namespace = "ru.mrz.$name"
+            }
         }
     }
 }

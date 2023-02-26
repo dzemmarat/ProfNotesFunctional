@@ -2,6 +2,7 @@ package profnotes
 
 import AppSettings
 import com.android.build.api.dsl.CommonExtension
+import com.android.build.gradle.LibraryExtension
 import com.android.tools.r8.internal.kt
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalogsExtension

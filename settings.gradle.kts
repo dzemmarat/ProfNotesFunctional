@@ -22,19 +22,21 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "ProfNotesFunctional"
 
-// Apps
-include(":app")
+File(rootProject.projectDir, "modules").walk()
+    .filter { it.isBuildGradleScript() }
+    .filter { it != rootProject.buildFile }
+    .mapNotNull { it.parentFile }
+    .forEach { moduleDir ->
+        val moduleName = when(moduleDir.parentFile.name) {
+            "core" -> ":core:${moduleDir.name}"
+            "domain" -> ":domain:${moduleDir.name}"
+            "feature" -> ":feature:${moduleDir.name}"
+            else -> ":${moduleDir.name}"
+        }
+        print(moduleName)
+        include(moduleName)
+        project(moduleName).projectDir = moduleDir
+    }
 
-// Core
-include(
-    ":core:common",
-    ":core:ui",
-    ":core:navigation",
-)
-
-// Features
-include(
-    ":feature:home",
-    ":feature:add",
-    ":feature:profile",
-)
+fun File.isBuildGradleScript(): Boolean =
+    isFile && name.matches("build\\.gradle(\\.kts)?".toRegex())

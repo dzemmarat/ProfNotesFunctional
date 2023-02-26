@@ -185,6 +185,7 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson_vers
 # Detekt
 detekt = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt_version" }
 detekt_formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt_version" }
+detekt_rules_compose = { group = "ru.kode", name = "detekt-rules-compose", version.ref = "detekt_compose_rules_version" }
 
 [bundles]
 androidx = [
