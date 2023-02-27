@@ -27,13 +27,13 @@ File(rootProject.projectDir, "modules").walk()
     .filter { it != rootProject.buildFile }
     .mapNotNull { it.parentFile }
     .forEach { moduleDir ->
-        val moduleName = when(moduleDir.parentFile.name) {
+        val moduleName = when (moduleDir.parentFile.name) {
             "core" -> ":core:${moduleDir.name}"
             "domain" -> ":domain:${moduleDir.name}"
             "feature" -> ":feature:${moduleDir.name}"
             else -> ":${moduleDir.name}"
         }
-        print(moduleName)
+        println(moduleName)
         include(moduleName)
         project(moduleName).projectDir = moduleDir
     }

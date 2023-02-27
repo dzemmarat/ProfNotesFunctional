@@ -29,6 +29,7 @@
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/modules/app" />
             <option value="$PROJECT_DIR$/modules/core/common" />
+            <option value="$PROJECT_DIR$/modules/core/elm" />
             <option value="$PROJECT_DIR$/modules/core/navigation" />
             <option value="$PROJECT_DIR$/modules/core/ui" />
             <option value="$PROJECT_DIR$/modules/domain/notes" />

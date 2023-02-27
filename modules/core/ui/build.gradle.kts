@@ -3,10 +3,6 @@ plugins {
     id("template.android.library.compose")
 }
 
-android {
-    namespace = "ru.mrz.core.ui"
-}
-
 dependencies {
     implementation(projects.core.common)
 

@@ -58,6 +58,7 @@ dependencies {
     implementation(projects.feature.home)
     implementation(projects.feature.add)
     implementation(projects.feature.profile)
+    implementation(projects.domain.notes)
 
     // AndroidX
     implementation(libs.bundles.androidx)

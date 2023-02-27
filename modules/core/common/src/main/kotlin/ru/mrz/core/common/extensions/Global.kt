@@ -1,18 +1,17 @@
 @file:Suppress("unused")
 
 package ru.mrz.core.common.extensions
-
-import ru.mrz.core.common.BuildConfig
+import ru.mrz.common.BuildConfig
 import java.util.Locale
 
 inline fun isDebug(block: () -> Unit = {}): Boolean =
     isType(block, "debug")
 
 inline fun isDev(block: () -> Unit = {}): Boolean =
-    isFlavor(block,"dev")
+    isFlavor(block, "dev")
 
 inline fun isProd(block: () -> Unit = {}): Boolean =
-    isFlavor(block,"prod")
+    isFlavor(block, "prod")
 
 inline fun isType(block: () -> Unit = {}, type: String): Boolean =
     BuildConfig.BUILD_TYPE.contains(type)

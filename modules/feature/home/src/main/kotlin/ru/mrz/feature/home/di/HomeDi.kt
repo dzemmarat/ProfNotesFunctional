@@ -5,9 +5,11 @@ import org.koin.dsl.module
 import ru.mrz.core.navigation.SharedScreen
 import ru.mrz.feature.home.pages.home.HomeScreen
 
-val homeKoinModule = module { }
+val homeFeatureKoinModule = module {
+    factory { NotesDependencies(notesRepository = get()) }
+}
 
-val homeScreenModule = screenModule {
+val homeFeatureScreenModule = screenModule {
     register<SharedScreen.Home> {
         HomeScreen()
     }

@@ -13,9 +13,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ru.mrz.core.ui.R
 import ru.mrz.core.ui.theme.ProfnotesTheme
 import ru.mrz.domain.notes.dto.Note
+import ru.mrz.ui.R
 
 @Composable
 fun Note(

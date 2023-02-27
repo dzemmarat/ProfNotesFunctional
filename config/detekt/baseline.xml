@@ -16,6 +16,7 @@
     <ID>InvalidPackageDeclaration:Flavor.kt$package ru.mrz.template</ID>
     <ID>EnumNaming:Flavor.kt$FlavorDimension$contentType</ID>
     <ID>InvalidPackageDeclaration:KotlinAndroid.kt$package ru.mrz.template</ID>
+    <ID>FunctionNaming:HomeScreen.kt$private fun LazyListScope.LoadingNotes()</ID>
   </ManuallySuppressedIssues>
   <CurrentIssues/>
 </SmellBaseline>

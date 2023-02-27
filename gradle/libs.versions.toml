@@ -24,6 +24,7 @@ kotlin_version = "1.8.10"
 serialization_json_version = "1.4.0"
 coroutines_version = "1.6.4"
 ksp_version = "1.8.10-1.0.9"
+immutable_collections_version = "0.3.5"
 
 # Android Jetpack
 appcompat_version = "1.5.1"
@@ -94,6 +95,7 @@ android_desugar_jdk_libs = { group = "com.android.tools", name = "desugar_jdk_li
 coroutines_core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines_version" }
 coroutines_android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines_version" }
 coroutines_test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines_version" }
+immutable_collections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "immutable_collections_version"}
 
 # Arrow
 arrow_platform = { group = "io.arrow-kt", name = "arrow-stack",  version.ref = "arrow_version" }
@@ -132,6 +134,7 @@ koin_compose = { group = "io.insert-koin", name = "koin-androidx-compose", versi
 # Elmslie
 elmslie_core = { group = "com.github.vivid-money.elmslie", name = "elmslie-core", version.ref = "elmslie_version" }
 elmslie_android = { group = "com.github.vivid-money.elmslie", name = "elmslie-android", version.ref = "elmslie_version" }
+elmslie_coroutines = { group = "com.github.vivid-money.elmslie", name = "elmslie-coroutines", version.ref = "elmslie_version" }
 
 # Test
 junit5 = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit_version" }
@@ -241,6 +244,7 @@ test = [
 elmslie = [
     "elmslie_core",
     "elmslie_android",
+    "elmslie_coroutines",
 ]
 
 navigator = [

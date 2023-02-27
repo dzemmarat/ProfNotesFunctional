@@ -54,6 +54,7 @@ internal fun Project.configureKotlinAndroid(
         add("coreLibraryDesugaring", libs.findLibrary("android.desugar.jdk.libs").get())
         add("implementation", libs.findLibrary("coroutines.core").get())
         add("implementation", libs.findLibrary("coroutines.android").get())
+        add("implementation", libs.findLibrary("immutable_collections").get())
 
         add("implementation", platform(libs.findLibrary("arrow.platform").get()))
         add("implementation", "io.arrow-kt:arrow-core")

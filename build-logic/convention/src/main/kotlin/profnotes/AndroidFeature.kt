@@ -16,6 +16,7 @@ internal fun Project.configureFeature(
             add("implementation", project(":core:ui"))
             add("implementation", project(":core:common"))
             add("implementation", project(":core:navigation"))
+            add("implementation", project(":core:elm"))
 
             // AndroidX
             add("implementation", libs.findBundle("androidx").get())

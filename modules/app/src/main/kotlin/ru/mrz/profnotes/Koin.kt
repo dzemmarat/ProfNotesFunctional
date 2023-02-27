@@ -6,8 +6,9 @@ import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext
 import org.koin.core.logger.Level
 import org.koin.core.module.Module
+import ru.mrz.domain.notes.di.notesDomainModule
 import ru.mrz.feature.add.di.addKoinModule
-import ru.mrz.feature.home.di.homeKoinModule
+import ru.mrz.feature.home.di.homeFeatureKoinModule
 import ru.mrz.feature.profile.di.profileKoinModule
 
 internal fun setupKoin(context: Context) {
@@ -20,7 +21,8 @@ internal fun setupKoin(context: Context) {
 }
 
 private val koinModules: List<Module> = listOf(
-    homeKoinModule,
+    homeFeatureKoinModule,
     addKoinModule,
     profileKoinModule,
+    notesDomainModule,
 )
